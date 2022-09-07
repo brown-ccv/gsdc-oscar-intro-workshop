@@ -133,6 +133,11 @@ This will load the `environment.yml` file from the current directory and use it 
 
 Now you have all the required packages to load Jupyter. Type ```jupyter notebook``` in your terminal. 
 
+![jupyter notebook](assets/jupyter.png)
+
 ## Running the example
 
 Launch the notebook plot_digits_classification.ipynb in the notebooks directory 
+
+![notebook](assets/notebook.png)
+
