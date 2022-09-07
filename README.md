@@ -37,7 +37,61 @@ When you are finished with your VNC session, click the "EXIT" button. You now ha
 ![kill VNC session](assets/kill_session.png)
 
 ## Cloning a GitHub Repo with `gh`
-- John
+In order to clone the repository, it is most secure to use the GitHub Command Line Tool. This needs some bootstrapping, as you need access to `gh` to clone the repository, which you can most easily install using `conda`, but you'll also need the repository cloned in order to create the `conda` environment from the environment file we provide.
+
+We'll create a minimal `conda` environment with just `gh` for the purposes of this workshop.
+
+Start by loading the `conda` module, which adds the conda binaries to the path and sets some environment variables:
+```bash
+module load anaconda/2022.05
+```
+
+Second, we need to load conda into our shell environment. Running this command means that we don't need to make any changes to the `.bashrc` file, and means that `conda` is only activated for this one session.
+
+```bash
+source "/gpfs/runtime/opt/anaconda/2022.05/etc/profile.d/conda.sh"
+```
+
+We'll initialize a new conda environment with the following command, which will display information about the environment to be created and ask for confirmation.
+```bash
+conda create --name gsdc-oscar-intro-workshop
+```
+
+Next, we activate the new `conda` environment:
+```bash
+conda activate gsdc-oscar-intro-workshop
+```
+
+We need to install the GitHub Command Line tool next. It isn't available in the anaconda "defaults" channel (the default repository of anaconda packages), so we add the argument `--channel conda-forge` to include the "conda-forge" repository of anaconda packages. The command will display information before running the install.
+```bash
+conda install --channel conda-forge gh
+```
+
+After completing this install, you should be able to run the following command to authenticate the GitHub Command Line Tool:
+```bash
+gh auth login
+```
+
+- At the prompts, select:
+    - "? What account do you want to log into?" `GitHub.com`
+    - "? What is your preferred protocol for Git operations?" `HTTPS`
+    - "? Authenticate Git with your GitHub credentials?" `Y`
+    - "? How would you like to authenticate GitHub CLI?" `Login with a web browser`
+
+- At the prompt "! First copy your one-time code:" copy your one-time code which looks like `AB12-34CD`.
+- Then press "return". Depending on whether your GUI can open a browser window, it may or may not throw an error at this point. 
+- If `gh` doesn't automatically open a browser window, oipen a new tab in a web browser and navigate to the address shown in the prompt [https://github.com/login/device](https://github.com/login/device)
+- There, paste the one-time code.
+- On the next page, select `Authorize github`.
+- Follow any other prompts to complete your login.
+- Return to the Oscar window. There may be an error, warning, or a delay, but eventually the Oscar prompt will return (if this takes longer than about a minute, ask for assistance).
+
+You can then clone this repository using this command:
+```bash
+gh repo clone brown-ccv/gsdc-oscar-intro-workshop
+```
+
+**Note**: Previously, it was recommended to add ssh-keys on Oscar directly (in `~/.ssh/`). **This is to be avoided.** Admins have access to those files, and this access could in principle be used to impersonate you on GitHub. Instead, use the `gh` command line tool, or use the `ssh-agent` to use ssh-keys from your laptop.
 
 ## Setting up a Conda Environment
 - John
