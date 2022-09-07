@@ -137,7 +137,7 @@ Now you have all the required packages to load Jupyter. Type ```jupyter notebook
 
 ## Running the example
 
-Launch the notebook plot_digits_classification.ipynb in the notebooks directory 
+Launch the notebook plot_digits_classification.ipynb in the notebooks directory and try running line by line. 
 
 ![notebook](assets/notebook.png)
 
