@@ -94,7 +94,40 @@ gh repo clone brown-ccv/gsdc-oscar-intro-workshop
 **Note**: Previously, it was recommended to add ssh-keys on Oscar directly (in `~/.ssh/`). **This is to be avoided.** Admins have access to those files, and this access could in principle be used to impersonate you on GitHub. Instead, use the `gh` command line tool, or use the `ssh-agent` to use ssh-keys from your laptop.
 
 ## Setting up a Conda Environment
-- John
+To add packages to the `conda` environment, you can either add packages one by one (as above), or install a whole bunch of packages in parallel using an environment file. When adding several packages at once, `conda` will resolve all the dependencies between the packages and (in the best case) ensure that your packages are compatible with each other. 
+
+Next, we'll update the environment we created before with the requirements for this tutorial.
+
+Navigate to the directory with the repository:
+```bash
+cd gsdc-oscar-intro-workshop
+```
+
+There, check that you can read the environment file, which lists the channels we want to use and all of the packages:
+```bash
+more environment.yml
+```
+
+To update the environment, we need to activate it using the commands from above. If you have restarted your shell, then you need to reload the module and the `conda` initialization:
+
+```bash
+module load anaconda/2022.05
+source "/gpfs/runtime/opt/anaconda/2022.05/etc/profile.d/conda.sh"
+```
+
+... then activate the `conda` environment:
+```bash
+conda activate gsdc-oscar-intro-workshop
+```
+
+Then you can run the update command:
+```bash
+conda env update
+```
+
+This will load the `environment.yml` file from the current directory and use it to update the current environment.
+
+**Pro-Tip**: If you're feeling the need for speed, and `conda` doesn't cut it, then `mamba` might be what you want. It's a drop-in replacement for `conda`. You can install it using `conda install -c conda-forge mamba` and then use `mamba env update` instead of `conda` for the environment update command. 
 
 ## Loading Jupyter
 - Aisulu
