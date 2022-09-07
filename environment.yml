@@ -1,0 +1,12 @@
+
+# platform: x86_64
+channels:
+  - conda-forge
+dependencies:
+ - gh
+ - scikit-learn
+ - scipy
+ - matplotlib
+ - ipykernel
+ - notebook
+ - scikit-learn-intelex
