@@ -130,7 +130,8 @@ This will load the `environment.yml` file from the current directory and use it 
 **Pro-Tip**: If you're feeling the need for speed, and `conda` doesn't cut it, then `mamba` might be what you want. It's a drop-in replacement for `conda`. You can install it using `conda install -c conda-forge mamba` and then use `mamba env update` instead of the previous command. 
 
 ## Loading Jupyter
-- Aisulu
+
+Now you have all the required packages to load Jupyter. Type ```jupyter notebook``` in your terminal. 
 
 ## Running the example
 
