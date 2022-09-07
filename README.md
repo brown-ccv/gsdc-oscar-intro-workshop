@@ -34,7 +34,7 @@ When you are finished with your VNC session, click the "EXIT" button. You now ha
 - Disconnect from VNC session closes the client but leaves your VNC session running. When you log in again, you will be automatically connected to your existing VNC session.
 - Kill VNC session closes the client and stops your VNC session from running.
 
-
+![kill VNC session](assets/kill_session.png)
 
 ## Cloning a GitHub Repo with `gh`
 - John
