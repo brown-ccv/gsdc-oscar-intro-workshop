@@ -4,6 +4,7 @@ channels:
   - conda-forge
 dependencies:
  - gh
+ - python
  - scikit-learn
  - scipy
  - matplotlib
