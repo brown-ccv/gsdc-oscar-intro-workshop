@@ -133,4 +133,5 @@ This will load the `environment.yml` file from the current directory and use it 
 - Aisulu
 
 ## Running the example
-- Aisulu
+
+Launch the notebook plot_digits_classification.ipynb in the notebooks directory 
