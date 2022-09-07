@@ -127,7 +127,7 @@ conda env update
 
 This will load the `environment.yml` file from the current directory and use it to update the current environment.
 
-**Pro-Tip**: If you're feeling the need for speed, and `conda` doesn't cut it, then `mamba` might be what you want. It's a drop-in replacement for `conda`. You can install it using `conda install -c conda-forge mamba` and then use `mamba env update` instead of `conda` for the environment update command. 
+**Pro-Tip**: If you're feeling the need for speed, and `conda` doesn't cut it, then `mamba` might be what you want. It's a drop-in replacement for `conda`. You can install it using `conda install -c conda-forge mamba` and then use `mamba env update` instead of the previous command. 
 
 ## Loading Jupyter
 - Aisulu
