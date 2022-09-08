@@ -11,22 +11,35 @@ The CCV VNC requires that you download a VNC client onto your machine.
 
 **Instructions**
 
-1. Ensure that you are either connected to [Brown VPN](https://vpn.brown.edu/vdesk/webtop.eui?z=/Common/Brown-Shib-VPN-Brown_VPN_CisAdmin&webtop=/Common/Brown-Shib-VPN-brown-vpn_webtop&webtop_type=webtop_na_only) or on a Brown Compliant Network (BrownWifi, ethernet etc). 
+1. Ensure that you are either connected to [Brown VPN](https://vpn.brown.edu/vdesk/webtop.eui?z=/Common/Brown-Shib-VPN-Brown_VPN_CisAdmin&webtop=/Common/Brown-Shib-VPN-brown-vpn_webtop&webtop_type=webtop_na_only) or on a Brown Compliant Network (Brown-Wifi, ethernet etc). 
 
-2. Ensure you have a recent version of the Java JDK or JRE. These can be found on [Oracle's Java Download Page](https://www.oracle.com/java/technologies/downloads/).
+2. Ensure you have a recent version of the Java JDK or JRE. 
+    - These can be found on [Oracle's Java Download Page](https://www.oracle.com/java/technologies/downloads/). 
+    - Alternatively, if you use `homebrew`, you can run 
+      ```bash
+      brew install java
+      ```
 
 3. Download the [CCV VNC client](https://drive.google.com/file/d/1MX20afDiKTJC58VzGvGU0GqD-F-8frit/view).
 
-4. If Java has been installed correctly you can now run CCV_VNC_2.x.jar by double clicking on it. 
+4. If Java has been installed correctly you can now run `CCV_VNC_2.x.jar` by double clicking on it. 
 
-- On a Mac, you may need to first right click on the jar, choose "Open", and give the jar permission to run. For newer versions, you may need to open a terminal, cd into the directory where the jar file is, and then run java -jar CCV_VNC_2.0.3.jar.
+- On a Mac, you may need to first right click on the jar, choose "Open", and give the jar permission to run. For newer versions, you may need to open a terminal, cd into the directory where the jar file is, and then run:
+  ```bash
+  java -jar CCV_VNC_2.0.3.jar
+  ```
+  
 - On Windows, you may have to right click on the jar, Choose "Open with", and select the Java JDK.
 
-5. In the "Username" and "Password" fields, enter your Oscar username and password, respectively. The server should remain desktop.ccv.brown.edu. Press "Connect".
+5. Connect: 
+    - In the `Username` and `Password` fields, enter your Oscar username and password, respectively. 
+    - The server should remain `desktop.ccv.brown.edu`. 
+    - Press `Connect`.
 
 6. On the window that pops up, select the memory/CPU parameters you want for your VNC session.
 
-7. Your VNC session should appear. If you see a window saying your job was queued, it means there were not enough free resources to start your job and it has been placed into the scheduling queue. You will continue to receive that message until your VNC job actually starts. You can monitor the progress of your job in the queue using normal scheduler commands.
+7. Your VNC session should appear. 
+    - If you see a window saying your job was queued, it means there were not enough free resources to start your job and it has been placed into the scheduling queue. You will continue to receive that message until your VNC job actually starts. You can monitor the progress of your job in the queue using normal scheduler commands.
 
 8. Once your VNC session starts, you should see your desktop. There are two new buttons on the menubar at the top, Suspend VNC session and End VNC session.
 
@@ -131,13 +144,16 @@ This will load the `environment.yml` file from the current directory and use it 
 
 ## Loading Jupyter
 
-Now you have all the required packages to load Jupyter. Type ```jupyter notebook``` in your terminal. 
+Now you have all the required packages to load Jupyter. Load it by running the following command:
+```bash
+jupyter notebook
+``` 
 
 ![jupyter notebook](assets/jupyter.png)
 
 ## Running the example
 
-Launch the notebook plot_digits_classification.ipynb in the notebooks directory and try running line by line. 
+Launch the notebook `plot_digits_classification.ipynb` in the notebooks directory and try running line by line. 
 
 ![notebook](assets/notebook.png)
 
